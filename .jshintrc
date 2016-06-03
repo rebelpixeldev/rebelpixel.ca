@@ -1,0 +1,33 @@
+
+{
+  "curly": false,
+  "eqnull": true,
+  "freeze":true,
+  "immed":true,
+  "indent":4,
+  "latedef":true,
+  "quotmark":"single",
+  "eqeqeq": true,
+  "undef": true,
+  "strict" : true,
+  "node":true,
+  "loopfunc" : false,
+  "scripturl" : true,
+  "esversion" : 6,
+  "globals": {
+    "jQuery": true,
+    "$" :false,
+    "angular" :false,
+    "_" : true,
+    "require": false,
+    "Octane" : false,
+    "document":false,
+    "window" : false,
+    "alert" : false,
+    "FormData" : false,
+    "Chart" : false,
+    "navigator" : false,
+    "Image" : false,
+    "StripeCheckout": false
+  }
+}

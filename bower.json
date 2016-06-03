@@ -1,0 +1,21 @@
+{
+  "name": "node-starter",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "rebelpixeldev <tedsczelecki@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rebelpixeldev/node-starter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "motion-ui": "^1.2.2"
+  }
+}
