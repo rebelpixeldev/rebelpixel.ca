@@ -90,7 +90,7 @@ gulp.task('default', ['clean'], function() {
 
     gulp.start('watch');
 
-    nodemon({ script: 'app.js', watch:['app.js','app/'], ext: 'js json' });
+    nodemon({ script: 'app.js', watch:['app.js','app/'], ext: 'js json html' });
 
     //nodemon({
     //    // the script to run the app

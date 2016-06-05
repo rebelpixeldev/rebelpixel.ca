@@ -28,6 +28,7 @@
     "Chart" : false,
     "navigator" : false,
     "Image" : false,
-    "StripeCheckout": false
+    "StripeCheckout": false,
+    "Paser": false
   }
 }
