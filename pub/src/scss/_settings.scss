@@ -62,7 +62,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Lato', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -92,10 +92,12 @@ $breakpoint-classes: (small medium large);
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
-);
+$grid-column-gutter : 30px;
+//$grid-column-gutter: (
+//  small: 20px,
+//  medium: 30px,
+//  large: 30px,
+//);
 $grid-column-align-edge: true;
 $block-grid-max: 8;
 
@@ -441,8 +443,8 @@ $pagination-arrows: true;
 // 27. Progress Bar
 // ----------------
 
-$progress-height: 1rem;
-$progress-background: $medium-gray;
+$progress-height: 0.9rem;
+$progress-background: #eee;
 $progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
 $progress-radius: $global-radius;

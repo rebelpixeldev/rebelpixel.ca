@@ -1,8 +1,17 @@
 @charset 'utf-8';
 
+@import 'mixins';
+
+
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+
+$primary-color:rgb(2, 154, 131);
+$progress-meter-background: $primary-color;
+$anchor-color:$primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -49,3 +58,5 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'core';

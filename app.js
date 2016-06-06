@@ -20,7 +20,8 @@ const MongoStore = require('connect-mongo')(session);
 /**
  * Create Express server.
  */
-const app = express();
+const
+    app     = express();
 
 /**
  * Express configuration.
