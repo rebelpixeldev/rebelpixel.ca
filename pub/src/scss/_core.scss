@@ -20,12 +20,23 @@ a{
 */
 .no-padding{padding:0 !important;}
 .no-padding-top{padding-top:0 !important;}
+.relative{position:relative !important;}
+
+.circle-icon{
+  background:$primary-color; display: block; width:50px; height:50px; text-align:center; position:absolute; top:0; left:0;
+  line-height:50px; color:get-color($primary-color); font-size:1rem; border-radius:100%; float:left;
+}
 
 nav{
   position:relative; z-index:99;
   a{
     padding-top:$column-gutter/2; padding-bottom:$column-gutter/2;
   }
+  .fa{display:block; font-size:2rem;}
+}
+
+footer{
+  padding-top:$column-gutter/2; border-top:dashed #ccc 1px; color:#b4b4b4;
 }
 
 /**
@@ -47,10 +58,22 @@ nav{
   background:rgba(255,255,255,0.95); padding-top:$column-gutter/2; padding-bottom:$column-gutter/2; margin-bottom:$column-gutter;
 }
 .content{
-  padding-top:$column-gutter/2; padding-bottom:$column-gutter;
+  padding-top:$column-gutter/2; padding-bottom:$column-gutter; position:relative;
   &.row{margin-left:0; margin-right:0;}
 }
 
 section{
   h2{font-size:1.4rem; margin-bottom:0; border-bottom:dashed 1px $primary-color; padding-bottom:$column-gutter/2; color:$primary-color}
+}
+
+/**
+*   ABOUT
+*/
+
+.doing-container{
+  position:relative; float:left;
+  .doing-content{
+    padding-left:45px; font-size:0.8rem; display:block; float:left; color:#7F7F7F;
+    strong{font-size:1.2em; display:block; color:#000;}
+  }
 }

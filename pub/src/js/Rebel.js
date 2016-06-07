@@ -1,16 +1,24 @@
 class Rebel{
 
     constructor(){
+        Rebel.getIo();
         this.background = new Background();
+        this.setupEvents();
     }
 
     setupEvents(){
-
+        window.addEventListener('hashchange', evt => {
+            console.log('CHANGEd' , evt);
+        })
     }
 
     static getEvents(){
         return {
-            USER_MOVE : 'USER_MOVE'
+            CONNECT     : 'CONNECT',
+            CONNECT_ALL : 'CONNECT_ALL',
+            DISCONNECT  : 'USER_DISCONNECT',
+            USER_MOVE   : 'USER_MOVE',
+            SET_COLOR   : 'SET_COLOR'
         }
     }
 

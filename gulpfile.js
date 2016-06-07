@@ -79,6 +79,12 @@ gulp.task('images', function() {
         .pipe(notify({ message: 'Images task complete' }));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('pub/src/fonts/**/*')
+        .pipe(gulp.dest('pub/dist/fonts'))
+        .pipe(notify({ message: 'Fonts task complete' }));
+});
+
 // Clean
 gulp.task('clean', function() {
     return del(['pub/dist/css', 'pub/dist/js', 'pub/dist/images']);
@@ -86,7 +92,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('styles', 'scripts', 'images', 'fonts');
 
     gulp.start('watch');
 

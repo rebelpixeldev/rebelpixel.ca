@@ -1,76 +1,82 @@
 class User{
 
-    constructor(context, isMe=false){
+    constructor(context, id, color='#000000', isMe=false){
         this.context        = context;
+        this.io             = Rebel.getIo();
+        this.id             = id;
+        this.color          = color;
+        this.isMe           = isMe;
         this.maxLineLength  = 100;
         this.maxLineLife    = 350;
-        this.line = [];
-        this.draw();
+        this.idle           = new Idle(this.context, this.color);
+        this.line           = [];
 
-        if ( isMe ){
+        this.draw();
+        this.setupEvents();
+    }
+
+    setupEvents(){
+        if ( this.isMe ){
             document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        } else {
+            Rebel.getIo().on(Rebel.getEvents().USER_MOVE, (data) => {
+                if(this.id === data.id ) {
+                    this.line = data.data;
+                    this.idle.setPosition(data.data[data.data.length-1].x, data.data[data.data.length-1].y);
+                }
+            });
         }
     }
 
     draw(){
         let renderTime = new Date().getTime();
-        //this.context.beginPath();
-        //this.context.fillStyle = 'rgb(0, 0, 0)';
-        //this.context.lineCap = 'round';
-        //this.context.lineJoin = 'round';
-        //this.context.lineWidth = 20;
-        //this.context.shadowBlur = 30;
-        ////this.context.lineWidth = (renderTime - data.time) / 20;
-        ////this.context.shadowBlur = (renderTime - data.time) / 30;
-        //this.context.shadowColor = 'rgb(0, 0, 0)';
-        this.line.forEach((data, i) => {
-            if ( (data.time + this.maxLineLife) < renderTime ){
-                this.line.splice(0,i);
-                return false;
-            }
-            let next = typeof this.line[i+1] === 'undefined' ? i : i+1;
+        if ( this.line.length === 1 ){
+            this.idle.show();
+        } else {
+            this.idle.hide();
+            this.line.forEach((data, i) => {
+                if ((data.time + this.maxLineLife) < renderTime) {
+                    this.line.splice(0, i);
+                    return false;
+                }
 
-            //this.context
+                let next = typeof this.line[i + 1] === 'undefined' ? i : i + 1;
 
-            //if ( i === 0 )
-            //    this.context.moveTo(data.x, data.y);
-            //else
-            //    this.context.lineTo(data.x, data.y);
-
-
-            //this.context.beginPath();
-            //this.context.rect(data.x,data.y, (data.x - this.line[next].x) ,5);
-            //this.context.fill();
-
-            this.context.beginPath();
-            this.context.moveTo(data.x, data.y);
-            this.context.lineTo(this.line[next].x, this.line[next].y);
-            this.context.lineCap = 'round';
-            this.context.lineJoin = 'round';
-            this.context.lineWidth = (renderTime - data.time) / 20;
-            //this.context.shadowBlur = (renderTime - data.time) / 30;
-            //this.context.shadowColor = 'rgb(0, 0, 0)';
-            this.context.stroke();
-
-
-        });
+                this.context.beginPath();
+                this.context.moveTo(data.x, data.y);
+                this.context.lineTo(this.line[next].x, this.line[next].y);
+                this.context.lineCap = 'round';
+                this.context.lineJoin = 'round';
+                this.context.strokeStyle = this.color;
+                this.context.lineWidth = (renderTime - data.time) / 20;
+                this.context.shadowColor = 'rgba(0, 0, 0, 0)';
+                this.context.stroke();
+            });
+        }
     }
 
     render(){
         if ( this.line.length > this.maxLineLength )
             this.line.splice(0,this.maxLineLength);
+        this.idle.render();
         this.draw();
     }
 
-    onMouseMove(evt){
+    destory(){
+        this.idle = [];
+    }
 
-        this.line.push({
+    onMouseMove(evt){
+        let pos = {
             time    : new Date().getTime(),
             x       : evt.clientX,
             y       : evt.clientY
-        });
+        };
 
-        Rebel.getIo().emit(Rebel.getEvents().USER_MOVE, this.line);
+        this.line.push(pos);
+        this.idle.setPosition(pos.x, pos.y);
+
+        Rebel.getIo().emit(Rebel.getEvents().USER_MOVE, {id: this.id, line:this.line});
     }
 
 }

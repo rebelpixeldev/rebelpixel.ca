@@ -1,3 +1,11 @@
+@function get-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
+
 @mixin box-shadow($top:5px, $left:5px, $blur:10px, $color:rgba(0,0,0,0.5), $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;

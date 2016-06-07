@@ -17,6 +17,7 @@
   "dependencies": {
     "foundation-sites": "^6.2.3",
     "motion-ui": "^1.2.2",
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "^1.4.6",
+    "font-awesome": "^4.6.3"
   }
 }
