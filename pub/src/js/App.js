@@ -16,6 +16,7 @@ class App{
             this.world.load.image(asset.split('/').pop().split('.')[0], asset);
         });
         window.Rebel.assets.preload.sprites.forEach(asset => {
+            console.log(asset);
             this.world.load.spritesheet(asset.split('/').pop().split('.')[0], asset, 64, 128);
         });
     }

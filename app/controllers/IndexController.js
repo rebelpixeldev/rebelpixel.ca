@@ -28,7 +28,7 @@ class IndexController{
             }, []),
             sprites:spriteFiles.reduce(function (ret, file) {
                 if ( file !== '.' && file !== '..' && fs.statSync(path.join(__dirname, '../../pub/dist/images/sprites', file)).isFile() )
-                    ret.push('/dist/images/' + file);
+                    ret.push('/dist/images/sprites/' + file);
                 return ret;
             }, []),
         });
