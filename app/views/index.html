@@ -40,9 +40,9 @@
         </div>
         <section class="container">
 
-            <div class="page-container">
+            <div class="page-outer-container">
                 {% include "./pages/resume.html" %}
-                <!--{% include "./pages/about.html" %}-->
+                {% include "./pages/about.html" %}
 
             </div>
 
@@ -56,6 +56,8 @@
 <canvas id="background"></canvas>
 
 <script src="/lib/socket.io-client/socket.io.js"></script>
+<script src="/lib/gsap/src/minified/TweenLite.min.js"></script>
+<script src="/lib/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
 
 <script src="/dist/js/Idle.js"></script>
 <script src="/dist/js/User.js"></script>

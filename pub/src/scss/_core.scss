@@ -36,7 +36,7 @@ nav{
 }
 
 footer{
-  padding-top:$column-gutter/2; border-top:dashed #ccc 1px; color:#b4b4b4;
+  padding-top:$column-gutter/2; border-top:dashed #ccc 1px; color:#b4b4b4; margin-top :$column-gutter/ 2;
 }
 
 /**
@@ -64,6 +64,11 @@ footer{
 
 section{
   h2{font-size:1.4rem; margin-bottom:0; border-bottom:dashed 1px $primary-color; padding-bottom:$column-gutter/2; color:$primary-color}
+}
+.page-container{
+  @include transition(opacity, 0.5);
+  opacity:0; width:100%;
+  &.active{opacity:1 !important; display:flex; flex-direction:column; }
 }
 
 /**
