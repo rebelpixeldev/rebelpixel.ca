@@ -1,0 +1,15 @@
+{
+	"title":"Chatplode",
+	"sub_title":"",
+	"description":"
+		<p><em>Chatplode</em> was a business venture that the client wanted to create to allow a user to upload an image and chat about it for up to 24 hours. The concept was very simple, and I had to do a little design work since a Theme Forest theme was provided. The difficult part was creating a production site built with <a href='/category/nodejs'>nodejs<a/> and <a href='category/mongodb'>mongodb</a></p>
+		<p>This was my first site that went into production that was built on <a href='/category/nodejs'>nodejs<a/> + <a href='category/mongodb'>mongodb<a/>. On top of having to figure out how to push a <a href='/category/nodejs'>nodejs</a> live on a rackspace server (which I also setup for the client), I ended up writing my own chat application code from scratch. Yes I know there are a lot of frameworks available for this but it is something I always wanted to write, for some reason. Unfortunately the client has since taken the site down.</p>
+	",
+	"info":{
+		"date":"15 January 2013",
+		"categories":[
+			"html","css", "javascript", "nodejs", "mongodb"
+		]
+	}
+
+}

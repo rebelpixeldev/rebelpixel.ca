@@ -6,11 +6,15 @@
 // Load plugins
 const
     autoprefixer    = require('gulp-autoprefixer'),
+    babel           = require("gulp-babel"),
+    babelify        = require('babelify'),
+    browserify      = require('browserify'),
     cache           = require('gulp-cache'),
     concat          = require('gulp-concat'),
     cssnano         = require('gulp-cssnano'),
     del             = require('del'),
     gulp            = require('gulp'),
+    gutil           = require('gulp-util'),
     imagemin        = require('gulp-imagemin'),
     jshint          = require('gulp-jshint'),
     livereload      = require('gulp-livereload'),
@@ -19,7 +23,14 @@ const
     path            = require('path'),
     rename          = require('gulp-rename'),
     sass            = require('gulp-sass'),
+    source          = require('vinyl-source-stream'),
+    sourcemaps      = require("gulp-sourcemaps"),
     uglify          = require('gulp-uglify');
+
+var dependencies = [
+];
+
+var scriptsCount = 0;
 
 // Styles
 gulp.task('styles', function() {
@@ -36,39 +47,11 @@ gulp.task('styles', function() {
             browsers: ['last 2 versions', 'ie >= 9']
         }))
         .pipe(gulp.dest('pub/dist/css'));
-
-    //
-    //return gulp.src('./sass/**/*.scss')
-    //    .pipe(sass().on('error', sass.logError))
-    //    .pipe(gulp.dest('./css'));
-
-    //return sass('pub/src/scss/app.scss',
-    //    {
-    //        style: 'expanded',
-    //        includePaths: [
-    //            'app/lib/foundation-sites/scss',
-    //            'app/lib/motion-ui/src'
-    //        ]
-    //    })
-    //    .pipe(autoprefixer('last 2 version'))
-    //    .pipe(gulp.dest('pub/dist/css'))
-    //    .pipe(rename({ suffix: '.min' }))
-    //    .pipe(cssnano())
-    //    .pipe(gulp.dest('pub/dist/css'))
-    //    .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src('pub/src/js/**/*.js')
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
-        //.pipe(concat('main.js'))
-        .pipe(gulp.dest('pub/dist/js'))
-        .pipe(rename({ suffix: '.min' }))
-        //.pipe(uglify())
-        .pipe(gulp.dest('pub/dist/js'))
-        .pipe(notify({ message: 'Scripts task complete' }));
+    bundleApp(false);
 });
 
 // Images
@@ -87,28 +70,8 @@ gulp.task('clean', function() {
 // Default task
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'images');
-
     gulp.start('watch');
-
-    nodemon({ script: 'app.js', watch:['app.js','app/'], ext: 'js json' });
-
-    //nodemon({
-    //    // the script to run the app
-    //    script  : 'app.js',
-    //    ext     : 'js html',
-    //    ignore  : ['node_modules/', 'pub/dist'],
-    //    env: { 'NODE_ENV': 'development' },
-    //    tasks   : ['watch'],
-    //    watch   : [path.join(__dirname, 'app/**/*.js'), 'app.js', path.join(__dirname, 'app/**/*.html')]
-    //})
-    //    .on('start', ['watch'])
-    //    .on('change', ['watch'])
-    //    .on('restart', function () {
-    //        // when the app has restarted, run livereload.
-    //        gulp.src('app.js')
-    //            .pipe(livereload())
-    //            .pipe(notify('Reloading page, please wait...'));
-    //    });
+    nodemon({ script: 'app.js', watch:['app.js','app/'], ext: 'js json html' });
 });
 
 // Watch
@@ -130,3 +93,44 @@ gulp.task('watch', function() {
     gulp.watch(['dist/**']).on('change', livereload.changed);
 
 });
+
+function bundleApp(isProduction) {
+    scriptsCount++;
+    // Browserify will bundle all our js files together in to one and will let
+    // us use modules in the front end.
+    var appBundler = browserify({
+        entries: 'pub/src/js/App.js',
+        debug: true
+    })
+
+    // If it's not for production, a separate vendors.js file will be created
+    // the first time gulp is run so that we don't have to rebundle things like
+    // react everytime there's a change in the js file
+    if (!isProduction && scriptsCount === 1){
+        // create vendors.js for dev environment.
+        browserify({
+            require: dependencies,
+            debug: true
+        })
+            .bundle()
+            .on('error', gutil.log)
+            .pipe(source('vendors.js'))
+            .pipe(gulp.dest('./pub/dist/js/'));
+    }
+    if (!isProduction){
+        // make the dependencies external so they dont get bundled by the
+        // app bundler. Dependencies are already bundled in vendor.js for
+        // development environments.
+        dependencies.forEach(function(dep){
+            appBundler.external(dep);
+        })
+    }
+
+    appBundler
+        // transform ES6 and JSX to ES5 with babelify
+        .transform("babelify", {presets: ["es2015"]})
+        .bundle()
+        .on('error',gutil.log)
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('./pub/dist/js/'));
+}

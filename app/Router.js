@@ -8,7 +8,8 @@ const
         fs.readdir(controllersPath, function (err, files) {
             files.forEach(function (file) {
                 const clss = require(path.join(controllersPath, file));
-                new clss(app);
+                const instance = new clss(app);
+                instance.setupRoutes();
             })
         })
     }

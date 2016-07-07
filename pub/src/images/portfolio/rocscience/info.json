@@ -1,0 +1,18 @@
+{
+	"title":"Rocscience",
+	"sub_title":"",
+	"description":"
+		<p><em>Rocscience</em> is a software company that provides rock for engineers and educational purposes. This site has several products and a ton of content ranging from software info, news and events and product info. The site is compatible down to IE6, to the point where it looks almost identical to modern browsers. There are over 30 different templates on the site and it was my first project that I lead  the <a href='/category/html'>front end development</a>. This still looks and functions great and has really withstood the test of time.</p>
+	",
+	"info":{
+		"date":"1 June 2010",
+		"categories":[
+			"html","css", "javascript"
+		],
+		"client":"Rocscience",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.rocscience.com"
+	}
+
+}

@@ -10,12 +10,12 @@ const
     expressValidator    = require('express-validator'),
     flash               = require('express-flash'),
     logger              = require('morgan'),
-    mongoose            = require('mongoose'),
     path                = require('path'),
     session             = require('express-session'),
     swig                = require('swig');
 
-const MongoStore = require('connect-mongo')(session);
+const
+    MongoStore = require('connect-mongo')(session);
 
 /**
  * Create Express server.
@@ -32,17 +32,23 @@ app.set('views', path.join(__dirname, '/app/views/'));
 app.use(express.static(path.join(__dirname, 'pub')));
 app.use(compression());
 app.use(logger('dev'));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(expressValidator());
+//app.use(session({
+//    resave: true,
+//    saveUninitialized: true,
+//    secret: process.env.SESSION_SECRET,
+//    store: new MongoStore({
+//        url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
+//        autoReconnect: true
+//    })
+//}));
 app.use(session({
-    resave: true,
+    secret: 'tedsczeleck~',
+    resave: false,
     saveUninitialized: true,
-    secret: process.env.SESSION_SECRET,
-    store: new MongoStore({
-        url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
-        autoReconnect: true
-    })
+    cookie: { secure: true }
 }));
 app.use(flash());
 /**

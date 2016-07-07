@@ -1,0 +1,16 @@
+{
+	"title":"sc2Lounge",
+	"sub_title":"",
+	"description":"
+		<p><em>SC2Lounge</em> was the first personal site I have made and launched (beside personal profile sites). When watching Starcraft 2 and e-sports videos on YouTube I often got very aggravated when the first out of a series would end and the next video would not automatically start. <em>SC2Lounge</em> was my solution, and after over a year of coding it and re coding it and recoding it, it launched.</p>
+		<p>I rewrote all of the code on this site 3 times before I was happy with how the code was written and how the site functioned. The most noticeable improvement were the benchmarks in updating process of the <a href='category/mysql'>database</a>. I started off using <a href='/category/php'>php</a> to load the user data from YouTube and zend lucene to build the search index. The performance was fine for the first time around, however, once that virgin cloud lifted I started looking for another alternative. After doing a lot of research I decided that using <a href='/category/java'>java</a> and apache lucene was the best bet. The only problem was that I didn’t know <a href='/category/java'>java</a>. I took the time to learn the language, which was a lot like <a href='/category/actionscript+3'>Actionscript 3</a>, and after writing the script that did the same thing <a href='/category/php'>php</a> was doing, I couldn't have been happier with the results. There were amazing performance improvements when building of the search index. I actually got it working on the first try and I had to watch the directories to make sure it was working properly due to the speed. In indexing 20,000 database entries, <a href='/category/php'>php</a> took ~5 minutes while <a href='/category/java'>java</a> took ~9 seconds. No brainer right!</p>
+	",
+	"info":{
+		"date":"3 March 2012",
+		"categories":[
+			"html","css", "javascript", "java", "php"
+		],
+		"url":"http://www.sc2lounge.com"
+	}
+
+}

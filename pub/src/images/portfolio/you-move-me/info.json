@@ -1,0 +1,19 @@
+{
+	"title":"You Move Me",
+	"sub_title":"",
+	"description":"
+		<p>This site was for the launch of the new brand <em>You Move Me</em>, located in both the US and Canada. This site had a lot of firsts for me which included, the first non automotive site built on <a href='/category/glovebox'>Glovebox</a>; the first site on <a href='/category/glovebox'>Glovebox</a> that needed a blog engine; the first time I used had used foundation <a href='/category/css'>css</a> framework; and the first time I had coded (a somewhat) <a href='/category/responsive'>responsive</a> layout. With their business model, the need for franchises to have their own site within the corporate site was needed to be built into <a href='/category/glovebox'>Glovebox</a>.</p>
+		<p>Since there were many new things with this site, there were many challenges with this site. I had to build  a blog engine into <a href='/category/glovebox'>Glovebox</a>, which mainly included creating a taxonomy schema and all the hooks for that into <a href='/category/glovebox'>Glovebox</a>. When it comes to the layout, the sidebar was the most difficult part of the front end. In the end I had to use some <a href='/category/javascript'>javascript</a> to manipulate the layout on document load (something that I cringe at the thought of but sometimes there’s no other way).</p>
+	",
+	"info":{
+		"date":"1 May 2013",
+		"categories":[
+			"html","css", "javascript", "responsive","php", "mobile", "glovebox"
+		],
+		"client":"You Move Me",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.youmoveme.com"
+	}
+
+}

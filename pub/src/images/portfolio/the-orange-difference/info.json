@@ -1,0 +1,19 @@
+{
+	"title":"The Orange Difference",
+	"sub_title":"",
+	"description":"
+		<p>The Orange Difference was built for <em>ING Direct Canada</em> to create an online version of their public accountability pdf document. This site had to be built in <a href='/category/html'>html</a> so it could be ported to different servers easily. The static site mixed with the amount of content casued it to be a long tedious build. On top of all that it also had to be in English and French </p>
+		<p>Due to the uniqueness of the site, I could not use any frameworks so I really had to flex my brain muscles on how to achieve the transition effects, loading the content and switching from desktop to mobile. There were many hurdles in this site with some of the biggest ones being, the sheer amount of content, the blind transition effect, and the graceful transition to mobile.</p>
+	",
+	"info":{
+		"date":"1 June 2013",
+		"categories":[
+			"html","css", "javascript", "responsive", "mobile"
+		],
+		"client":"ING Direct Canada",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.theorangedifference.ca"
+	}
+
+}

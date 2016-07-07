@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "^6.2.3",
-    "motion-ui": "^1.2.2"
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.6",
+    "flexslider": "^2.6.1"
   }
 }

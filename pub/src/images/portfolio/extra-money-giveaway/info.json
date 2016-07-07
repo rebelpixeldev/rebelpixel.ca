@@ -1,0 +1,17 @@
+{
+	"title":"Extra Money Giveaway",
+	"sub_title":"",
+	"description":"
+		<p><em>The Extra Money Giveaway</em> was a mircosite developed for <em>H&R Block</em> as a fun way to give away money and free tax services. This site hasn't been up for a while now but it was one of my first full site builds I had ever done. The site was built using <a href='/category/actionscript+3'>flash<a/> and <a href='/category/actionscipt+3'>papaervision 3d</a> in order to achieve the 3d floating. The most intertesting part that was done on this site was the reflection on the cubes. Papervision has a reflection class for the cubes but it did’t achieve the look that we were going for so I had to write my own. In the end I duplicated the image that was on the face of the cube on the fly, flipped it and created a gradient mask on the bottom from the bottom up.</p>
+	",
+	"info":{
+		"date":"05 March 2010",
+		"categories":[
+			"actionscript+3"
+		],
+		"client":"H&amp;R Block",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca"
+	}
+
+}

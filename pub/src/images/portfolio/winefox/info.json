@@ -1,0 +1,17 @@
+{
+	"title":"Winefox",
+	"sub_title":"",
+	"description":"
+		<p>A new brand <em>Winefox</em>, was a site that was created to cater to wine connoisseurs to give them info about new wines. The site allowed users to read articles on wine, purchase wine and provide users with a pairing guide to match wines with food. This was a very complex wordpress build which had custom user logins, data pulls from various sources and a data matrix for the food to wine pairings.</p>
+	",
+	"info":{
+		"date":"15 September 2011",
+		"categories":[
+			"html","css", "wordpress", "php"
+		],
+		"client":"Torstar",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca"
+	}
+
+}

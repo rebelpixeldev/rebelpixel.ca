@@ -1,0 +1,17 @@
+{
+	"title":"Glovebox v2 Themes",
+	"sub_title":"",
+	"description":"
+		<p>This is the second version of the themes that are used for dealers on the <a href='/category/glovebox'>Glovebox</a> system. In this second version of the themes the <a href='/category/css'>css</a> framework and how everything is structured was changed. With encorporating Foundation it gave us the <a href='category/responsive'>responsivness</a> we wanted and with the custom <a href='category/css'>sass</a> hiearchy I built, it gave us the ease of extending themes.</p>
+		<p>These were the first <a href='/category/responsive'>responsive</a> dealer sites on any system in Canada and it was no easy task. The hardest part to this build was definetly the navigation. I wanted to use the built in Foundation navigation but the <a href='/category/html'>html</a> structure was very limiting when creating the drop downs on the full sized site. With a lot of perseverance, patients and a little magic I found a solid solution and now it functions as was intended.</p>
+	",
+	"info":{
+		"date":"1 May 2013",
+		"categories":[
+			"html","css", "javascript", "responsive", "java", "glovebox"
+		],
+		"agency":"Glovebox",
+		"agency_url":"http://www.gloveboxcms.com"
+	}
+
+}

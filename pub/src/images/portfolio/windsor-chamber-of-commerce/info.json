@@ -1,0 +1,17 @@
+{
+	"title":"Windsor Chamber of Commerce",
+	"sub_title":"",
+	"description":"
+		<p><em>The Windsor Chamber of Commerce</em> site was for a group that represents various business in and around the Windsor, Ontario area. It was built on <a href='/category/wordpress'>wordpress</a> and also integrated Membee profiles and directories.</p>
+		<p>The most difficult part of this site BY FAR was integrating the Membee member info. It is a very old looking (and functioning) directory/login utility that was extremely hard to use and just achieve simple pulls of information. Other than that it was a very standard <a href='/category/wordpress'>wordpress</a> build with using custom post types and multiple plug-ins to end up with a very sleek and speedy site experience.</p>
+	",
+	"info":{
+		"date":"1 April 2012",
+		"categories":[
+			"html","css", "php", "wordpress"
+		],
+		"client":"Windsor Chamber of Commerce",
+		"url":"http://www.windsorchamber.org/"
+	}
+
+}

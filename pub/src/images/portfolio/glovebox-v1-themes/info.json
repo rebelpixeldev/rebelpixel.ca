@@ -1,0 +1,17 @@
+{
+	"title":"Glovebox v1 Themes",
+	"sub_title":"",
+	"description":"
+		<p>These were the themes on the <em><a href='/category/glovebox'>Glovebox</a></em> system when it launched. When the first site launch on <a href='/category/glovebox'>Glovebox</a> in 2011, the web was just starting to really adopt the new standards in html5 and especially <a href='category/css'>css3</a>. Because of this, all of these sites had images for everything that is now done with <a href='/category/css'>css</a>.</p>
+		<p>This was the largest project I have ever taken on. This was not only a standard front-end site build, it was also creating the backend hooks and then hooking everything together. These sites are 100% compatible down to IE7 (which we all know is super fun).  I had to also build a few jQuery plugins, as well as incorporate several more.</p>
+	",
+	"info":{
+		"date":"1 September 2011",
+		"categories":[
+			"html","css", "javascript", "php", "mobile", "glovebox"
+		],
+		"agency":"Glovebox",
+		"agency_url":"http://www.gloveboxcms.com"
+	}
+
+}

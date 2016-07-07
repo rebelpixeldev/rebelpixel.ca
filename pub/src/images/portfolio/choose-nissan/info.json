@@ -1,0 +1,19 @@
+{
+	"title":"Choose Nissan",
+	"sub_title":"",
+	"description":"
+		<p>Choose Nissan was a site done for <em>Nissan Canada</em> to feature their monthly specials. <em>Nissan</em>, like every other car company, has monthly specials split up into different regions. The west coast might have specials on trucks while Quebec might have specials on compacts. The user is automatically is directed to their region from a landing page where they must enter their postal code. Along with 5 different regions, one is in both English and French (can you guess what region that would be?)</p>
+		<p>It was relatively easy to accomplish with the <a href='/category/responsive'>responsiveness</a> using foundation and there wasn't much custom <a href='/category/javascript'>javascript</a> to do, besides the dealer locator. The site is built on <a href='/category/glovebox'>Glovebox</a> so most of the backend was already available, I just had to write a little bit of <a href='/category/php'>php</a> to get custom info from the <a href='/category/mysql'>database</a>. On top of the <a href='/category/html'>html</a> and <a href='/category/php'>php</a> there are a few tools written in python to populate certain content on the site.</p>
+	",
+	"info":{
+		"date":"15 June 2013",
+		"categories":[
+			"html", "css", "javascript", "responsive", "glovebox"
+		],
+		"client":"nissan",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.choosenissan.ca"
+	}
+
+}

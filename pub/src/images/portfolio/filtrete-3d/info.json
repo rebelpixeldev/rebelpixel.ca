@@ -1,0 +1,18 @@
+{
+	"title":"Filtrete 3d",
+	"sub_title":"",
+	"description":"
+		<p><em>Filtrete</em> was a site created for <em>3M</em> to show off the efficiency furnace filters. This site was one of my first site I worked on at Dashboard and the amount I learnt on it was unbelievable. The coolest part of the site, was an awesome stereoscopic 3d adventure down a furnace grate to see all the creepy crawlers that exist. Another cool part to the site was the individual filter pages where different specs of `dust` would fly in from all angles and get stuck on the filters. This site won an FWA Site of the Day award, Applied Arts award and was featured in the stereoscopic edition of .Net Magazine.</p>
+	",
+	"info":{
+		"date":"15 September 2009",
+		"categories":[
+			"actionscript+3"
+		],
+		"client":"3M",
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.filtrete3d.com/filtrete/App_Assets/swf/index_v2.swf"
+	}
+
+}

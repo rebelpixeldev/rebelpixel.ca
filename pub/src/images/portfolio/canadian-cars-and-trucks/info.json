@@ -1,0 +1,18 @@
+{
+	"title":"Canadian Cars and Trucks",
+	"sub_title":"",
+	"description":"
+		<p><em>Canadian Cars and Trucks</em> is a site that provides users with information about the vehicles and dealerships in Canada. Although this was a quick build, it was really fun creating the intricate filter and the dealer locator.</p>
+		<p>Since this site was built off code we already had, it allowed me to focus more on nuances and custom features around the site. This was the first (of many to follow ) Google maps locator widget. I always enjoy working with Google APIs because, for the most part, it is easy to figure out and get something up and running quickly. One of the hardest parts to the site to accomplish was the filter. It is present on every page so it had to maintain its state both from the page and query parameters. </p>
+	",
+	"info":{
+		"date":"1 September 2012",
+		"categories":[
+			"html","css", "javascript", "php"
+		],
+		"agency":"dashboard",
+		"agency_url":"http://www.dashboard.ca",
+		"url":"http://www.canadiancarsandtrucks.com"
+	}
+
+}

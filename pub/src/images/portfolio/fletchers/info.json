@@ -1,0 +1,18 @@
+{
+	"title":"Fletchers",
+	"sub_title":"",
+	"description":"
+		<p>The <em>Fletchers</em> site was for their brand launch in Canada. It was a relatively simple site to show off their products, create some tasty recipes and create BBQ tips for their BBQ leagues.</p>
+		<p>The site was built with foundation and built on <a href='/category/glovebox'>Glovebox</a>, and because of that it was a nice quick build with little problems. A difficulty I did encounter was in angled text in the big daddy, which I wanted used the `rotate` <a href='/category/css'>css</a> property so it would be able to be editable through <a href='/category/glovebox'>Glovebox</a>. In the end I found a happy medium between font size and position.</p>
+	",
+	"info":{
+		"date":"14 June 2013",
+		"categories":[
+			"html","css", "javascript", "responsive","glovebox"
+		],
+		"client":"Fletchers Fine Foods",
+		"agency":"dashboard",
+		"url":"http://www.fletchers.com"
+	}
+
+}
