@@ -27,7 +27,7 @@ class App{
         $('.skill-overview').on('mouseover', this.onSkillMouseOver.bind(this));
         //$('.portfolio-item').on('click', this.onPortfolioItemClick.bind(this));
         $('#close-project').on('click', this.closePortfolio.bind(this));
-        $('nav a').on('click', this.onNavClick.bind(this));
+        $('nav a, .scroll').on('click', this.onNavClick.bind(this));
         $(window).on('scroll', this.onPageScroll.bind(this));
     }
 
