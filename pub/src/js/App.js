@@ -9,7 +9,12 @@ class App{
 
         this.doc = document.documentElement;
         this.portfolioContainer = $('#portfolio-details');
-        this.hero = document.getElementById('home');
+
+        //sections
+        this.$home = $('#home');
+        this.$navbar = $('#navbar');
+        this.$sections = $($('.section-content').get().reverse());
+
         $('.no-js').removeClass('no-js');
         this.addListeners();
 
@@ -22,6 +27,8 @@ class App{
         $('.skill-overview').on('mouseover', this.onSkillMouseOver.bind(this));
         //$('.portfolio-item').on('click', this.onPortfolioItemClick.bind(this));
         $('#close-project').on('click', this.closePortfolio.bind(this));
+        $('nav a').on('click', this.onNavClick.bind(this));
+        $(window).on('scroll', this.onPageScroll.bind(this));
     }
 
     onSkillMouseOver(evt){
@@ -71,12 +78,51 @@ class App{
     closePortfolio(){
         $('#portfolio-wrap').hide();
         $('body').css('overflow', 'visible');
-        return false;
+        //return false;
     }
 
     parseHash(){
         const slug = window.location.hash.split('/').pop();
         this.updatePortfolioSelection(this.works[slug]);
+    }
+
+    onNavClick(evt){
+        const
+            elemTop     = $($(evt.currentTarget).attr('href')).offset().top - this.$navbar.height(),
+            diff        = Math.abs(elemTop - $(window).scrollTop()),
+            duration    = Math.round(Math.sqrt(diff)) * 8;
+        $('nav .active').removeClass('active');
+        $(evt.currentTarget).addClass('active');
+        $('html,body').stop().animate({scrollTop: elemTop }, duration);
+        return false;
+    }
+
+    onPageScroll(){
+        const scrollTop = $(window).scrollTop();
+
+        // Check if the nav should have a background yet
+        if ( scrollTop > 25)
+            this.$navbar.removeClass('no-background');
+        else
+            this.$navbar.addClass('no-background');
+
+
+        $('nav .active').removeClass('active');
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+            $('[href="#contact"]').addClass('active');
+        } else {
+            this.$sections.each((i, elem) => {
+                const elemTop = $(elem).offset().top - (this.$navbar.height() * 2);
+                if (elemTop < scrollTop) {
+                    if ( $(elem).attr('id') !== 'home' )
+                        $('[href="#' + $(elem).attr('id') + '"]').addClass('active');
+                    return false;
+                }
+
+            })
+        }
+
+
     }
 }
 

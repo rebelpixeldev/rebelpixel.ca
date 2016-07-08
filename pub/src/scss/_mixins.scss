@@ -1,0 +1,15 @@
+$triangle-width : 15px;
+@mixin triangle(){
+  position:absolute; top:-$triangle-width;
+  width: 0; height: 0;
+  border-left: $triangle-width solid transparent;
+  border-right: $triangle-width solid transparent;
+  border-bottom: $triangle-width solid #ddd;
+}
+
+@mixin transition($property, $duration:0.4s, $easing:linear) {
+  -moz-transition:    $property $duration $easing;
+  -o-transition:      $property $duration $easing;
+  -webkit-transition: $property $duration $easing;
+  transition:         $property $duration $easing;
+}
