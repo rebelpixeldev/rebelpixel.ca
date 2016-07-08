@@ -82,8 +82,11 @@ class App{
     }
 
     parseHash(){
-        const slug = window.location.hash.split('/').pop();
-        this.updatePortfolioSelection(this.works[slug]);
+        console.log(window.location.hash);
+        if ( window.location.hash.indexOf('project') > -1 ) {
+            const slug = window.location.hash.split('/').pop();
+            this.updatePortfolioSelection(this.works[slug]);
+        }
     }
 
     onNavClick(evt){

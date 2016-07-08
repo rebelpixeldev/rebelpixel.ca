@@ -58,8 +58,7 @@ gulp.task('scripts', function() {
 gulp.task('images', function() {
     return gulp.src('pub/src/images/**/*')
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('pub/dist/images'))
-        .pipe(notify({ message: 'Images task complete' }));
+        .pipe(gulp.dest('pub/dist/images'));
 });
 
 // Clean
@@ -72,6 +71,10 @@ gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'images');
     gulp.start('watch');
     nodemon({ script: 'app.js', watch:['app.js','app/'], ext: 'js json html' });
+});
+
+gulp.task('build', ['clean'], function() {
+    gulp.start('styles', 'scripts', 'images');
 });
 
 // Watch
