@@ -24,8 +24,10 @@ class IndexController{
     }
 
     home(req, res){
+        console.log(req.headers.host);
         res.render('index', {
-            works : works
+            works : works,
+            renderAnalytics : req.headers.host !== 'localhost:3000'
         });
     }
 }
