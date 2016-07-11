@@ -5,7 +5,7 @@
 	"description": "<p>Ever since I started at Dashboard, we were asked to embed third party chat systems onto our clients websites. In my opinion, the majority of them looked and functioned like garbage, and I always wanted to build a better version. After going to NADA (the largest dealer conference in North America), I set off to start building  a call tracking software using the Octane framework, which didn't last long. I soon pivoted to building a full-blown chat app, but with a little twist. Imagine, instead of  having to be physically on the computer to see and respond to chatting visitors on your site, you were able to forward the message to your phone via SMS and MMS. I used the Twilio api to forward messages to the dealer or the user if their cell number was in the system. I used NodeJS and Socket.io to provide the realtime chat and the Twilio NodeJS module to interact with Twilio. However, there were a few hardships along the way;  one of the most difficult to overcome, was what to build the criteria on, i.e. when or if to forward the message. There were a couple of iterations on this, but I ended up creating something elegant that solved chat forwarding and as a bonus, made everything easier to read.</p><p>I teamed up with a colleague to assist with the interface and design of the admin area and the chat that appears on a dealer's site. Everything ended up looking exceptionally crisp and it was extremely easy to use. We built it into the Octane platform to provide a seamless integration to the other products using the platform. While this never went to production, it was a great side project built from scratch by myself and completed a beta version.</p>",
 	"info": {
 	  "date": "March 4th 2016",
-	  "categories": ["nodejs", "css", "javascript", "octane"],
+	  "categories": ["NodeJS", "HTML/CSS", "Postgres", "Angular", "Javascript", "Octane"],
 	  "client": "Dashboard",
 	  "company": "Rebel Pixel"
 	},
@@ -17,7 +17,7 @@
 	"description": "<p>Odometer is the big data component of the Octane platform. It is a simple script that you embed on a site which will collect clickstream data for each user that visits the dealer's site. <p><p>Before starting on this, I had only done a little work with MongoDB with very few entries. Odometer has millions of entries and I needed to run large queries with analysis. I ended up using the built-in Mongo functions, MapReduce and Aggregation, to run the queries and analyse the data in one task. The output data was saved separately, so I can query it for the front end later on. I learned a lot about the internals on Mongo and how its indexes work, which sped up the queries in a very noticeable way.</p>",
 	"info": {
 	  "date": "15 March 2015",
-	  "categories": ["javascript", "MongoDB"],
+	  "categories": ["NodeJS", "Angular", "HTML/CSS", "Javascript", "MongoDB"],
 	  "company": "Dashboard",
 	  "url" : "https:\/\/www.convertwithoctane.com/#!/products/odometer"
 	},
@@ -29,7 +29,7 @@
 	"description": "<p>This was one of the most enjoyable and interesting projects that I ever worked on, even though it had its fair share of gotchas and challenges. A dealer has access to an admin area to build and completely customize a page takeover. After embedding a javascript snippet on their site, they have full control of the pages the takeover shows up on, the frequency and the start and end dates of the campaign.</p><p>Since there are over 30 different modules, I wanted to create a framework that builds the modules as quick as possible and for each one to maintain consistency. The idea was that all of the boilerplate would be done in the framework, so you would just need to build the specific functionality and style each module, speeding up the build time in the process I accomplished this by building an event and object based solution that was easy to build new modules and track the events within the module. Simply override a function or listen for an event and the module could customize the way it handles user actions.</p>",
 	"info": {
 	  "date": "15 January 2015",
-	  "categories": ["nodejs", "html", "css", "javascript", "octane"],
+	  "categories": ["NodeJS", "HTML/CSS","Javascript", "Postgres", "Octane"],
 	  "company": "Dashboard",
 	  "url" : "https:\/\/www.convertwithoctane.com/#!/products/revups"
 	},

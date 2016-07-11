@@ -1,0 +1,63 @@
+TED SCZELECKI
+FULLSTACK DEVELOPER • PROBLEM SOLVER • OUTDOORS ENTHUSIAST
+
+416.949.6743
+ted@rebelpixel.ca
+www.tedsczelecki.com
+1103 - 21 Lascelles Blvd
+Toronto, Ontario M4V 2B8
+
+Experience
+---------------
+                                                                                                                  
+REBEL PIXEL - Owner                                                                                      
+April 2015 to present
+                                                                                                          
+In 2015 I started getting more and more project inquires so I finally needed to register my own company, Rebel Pixel was born. I mainly took on site builds, mostly on Wordpress, but I also had the chance to build my first native Android app which was an unforgettable experience. In the future, I’d like to make Rebel Pixel more of an R&D company pushing the limits of tech and building open source frameworks and modules.
+                                                                                                                         
+DASHBOARD - Tech Lead                                                                                                  
+Oct 2013 - May 2016                                                                  
+I was Tech lead at Dashboard for a little less than 3 years. I was responsible for hiring new developers, mentoring the junior developers, scheduling and resourcing to meet deadlines, day-to-day programming and architecting the Octane framework. It was an extremely busy time, full of learning and experiences, allowing me to grow into a team lead.
+                                                                                                                 
+Dashboard - Developer
+May 2009 - Oct 2013                                                                                               
+I started at Dashboard about a month after finishing at Humber College. Dashboard came in and talked to our class midway through the program. At the time they were one of the best flash shops in Toronto, which increased my desire to work there. During the first year at Dashboard I was helping out the senior developers, with whatever they needed. One of the things I had to do early on was build a Facebook Connect app without having Facebook account. Over the next little bit I was responsible to maintain Glovebox V1 sites, as well as build smaller sites that came through. The first project I lead was Rocscience, which was a huge challenge and learning experience. Later on in my time at Dashboard, I was able to design and architect the next iteration of Glovebox and was maintaining it full-time.
+                                                                                                                   
+Education
+---------------
+
+HUMBER COLLEGE - Web design, development and maintenance
+Oct 2013 - May 2016
+This was an accelerated 6 month program, which taught all of the basics in web development and design. Originally, I wanted to get into graphic design and enrolled in the course for the sole purpose to know how to code a little bit. Shortly after starting the program, I fell in love with coding and have never looked back.
+
+Awards
+---------------
+
+THE GLOBE AND MAIL CANNES YOUNG LIONS
+Placed silver in the 2012 competition
+Not knowing much about what I was getting into, I entered this competition last minute with a co-worker at Dashboard. The competition’s format is you receive a brief at 9am and you have 24 hours to build a banner ad campaign around that brief. After the 24 hours are up the entries go to a panel on judges and the client to select a winner. The winner at the end received a trip to the Cannes festival in France to compete against teams from all over the world.
+
+The client was YMCA and the goal of the campaign was to bring awareness to all the things the YMCA offers. We ended up building a parallax scrolling banners which took the user through various environments including a gym and a campsite (with a fire using a particle engine!)
+
+Skills
+---------------
+
+ HTML/CSS                   - 10 Years
+ PHP                        - 7 Years
+ Javascript                 - 6 Years
+ Apache, MySql              - 5 Years
+ NodeJS, Grunt, PostgreSQL  - 3 Years
+ AngularJs                  - 2 Years
+ Android                    - 2 Projects
+
+Experimenting
+---------------
+Arduino and Raspberry PI 
+Unity and C# 
+Python 
+Gulp 
+React 
+Bash 
+Java
+
+References available upon request
