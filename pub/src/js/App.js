@@ -29,6 +29,18 @@ class App{
         $('#close-project').on('click', this.closePortfolio.bind(this));
         $('nav a, .scroll').on('click', this.onNavClick.bind(this));
         $(window).on('scroll', this.onPageScroll.bind(this));
+
+        $('.navbar-toggle').on('click', this.toggleCollapseNav.bind(this));
+    }
+
+    toggleCollapseNav(evt, collapse = false){
+        if ( collapse ){
+            console.log('HEYER');
+            $('.navbar-collapse').addClass('collapse');
+        } else {
+            console.log('O');
+            $('.navbar-collapse').toggleClass('collapse');
+        }
     }
 
     onSkillMouseOver(evt){
@@ -90,13 +102,22 @@ class App{
     }
 
     onNavClick(evt){
+        let elemTop     = $($(evt.currentTarget).attr('href')).offset().top - this.$navbar.height();
         const
-            elemTop     = $($(evt.currentTarget).attr('href')).offset().top - this.$navbar.height(),
             diff        = Math.abs(elemTop - $(window).scrollTop()),
             duration    = Math.round(Math.sqrt(diff)) * 8;
+
+        if ( $(window).width() <= 560 )
+            elemTop += 260;
         $('nav .active').removeClass('active');
         $(evt.currentTarget).addClass('active');
         $('html,body').stop().animate({scrollTop: elemTop }, duration);
+
+
+        if ( !$('.navbar-collapse').hasClass('collapse') ){
+            this.toggleCollapseNav(null, true);
+        }
+
         return false;
     }
 

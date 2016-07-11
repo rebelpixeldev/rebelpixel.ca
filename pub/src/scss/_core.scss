@@ -1412,7 +1412,7 @@ Author URI: http://themeforest.net/user/thethemelab
     width: 49.4%;
   }
   .section-content {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   .section-title h1 {
     font-size: 45px;
@@ -1444,6 +1444,31 @@ Author URI: http://themeforest.net/user/thethemelab
   }
 }
 @media (max-width: 560px) {
+
+  .desktop-subheading, .skills-container{display:none !important;}
+  .mobile-subheading, .mobile-skill.skill-container{display:block !important;}
+  .mobile-skill.skill-container{
+    padding: 20px 20px 0; margin-bottom:30px; margin-left:0; margin-right:0; border-radius:0;
+    ul{margin:0 !important}
+  }
+  nav li{margin-left:0;
+    a{border-radius:0;}
+  }
+  .section-content {padding:0;}
+  .skill-overview p{margin-bottom:0;}
+  #home .heading-caption{
+    width:370px;
+    .box-title{font-size:60px}
+  }
+  .timeline .title{left:50%; margin-left:-25px;}
+  .timeline {
+    padding-top: 20px !important;
+    &:before {display: none;}
+  }
+  #navbar.no-background{background:rgba(0,0,0,0.85) !important;}
+  .navbar-toggle{
+    .icon-bar{background:#FFF;}
+  }
   .header .heading {
     font-size: 26px;
     letter-spacing: 0px;
@@ -1453,7 +1478,7 @@ Author URI: http://themeforest.net/user/thethemelab
   }
   .portfolio-items article {
     width: 100%;
-    margin:0px 0px 5px 0px;
+    margin:0px 0px 20px 0px;
   }
   .section-title h1:before, .section-title h1:after {
     background: none;
@@ -1461,6 +1486,7 @@ Author URI: http://themeforest.net/user/thethemelab
   .section-title h1.white:before, .section-title h1.white:after {
     background: none;
   }
+
   ul.timeline{
     background: none;
   }
@@ -1524,6 +1550,13 @@ Author URI: http://themeforest.net/user/thethemelab
     left: -8%;
   }
 }
+
+.desktop-subheading{display:block;}
+.mobile-subheading{display:none;}
+
+#secondary{float:right}
+.mobile-skill{display:none;}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .project-description {
